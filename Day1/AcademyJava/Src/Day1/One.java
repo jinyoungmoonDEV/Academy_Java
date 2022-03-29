@@ -27,6 +27,7 @@ public class One {
 		
 		*/
 		
+
 		System.out.print("안녕!");
 	}
 
