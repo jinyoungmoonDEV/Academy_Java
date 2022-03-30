@@ -32,5 +32,5 @@ Overriding : 제정의 -> 기존의 함수를 복사후(상속!!) 자신만의 �
 Overloading:중복 
 
 Ex)int inp (char x);    ex2)int inp (char x);
-    int inp(int x,);            int inp (char x, char y);
+    int inp(int x,);        int inp (char x, char y);
 
