@@ -13,7 +13,7 @@ public class Rvr {
 		}
 	
 	/*
-	private static String revsqueeze(String s, char c) {
+	public static String revsqueeze(String s, char c) {
 	      char ch;
 	      String temp = "";
 	      for (int i = s.length() - 1; i >= 0; i--) {
@@ -27,7 +27,7 @@ public class Rvr {
 	   }
 	   */
 	
-	private static String revsqueeze(String s, char c) {
+	public static String revsqueeze(String s, char c) {
 	      char ch;
 	      String temp = "";
 	      int i = s.length()-1;

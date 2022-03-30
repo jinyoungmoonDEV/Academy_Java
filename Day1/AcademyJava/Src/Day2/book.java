@@ -112,6 +112,7 @@ public class book {
 		System.out.printf("3. %s\n",num % 4== 0 ^ num % 5 == 0);
 		*/
 		
+		/*
 		//8번
 		Scanner sc = new Scanner(System.in);
 		System.out.print("0~999 사이의 숫자를 입력하세요 : ");
@@ -120,8 +121,45 @@ public class book {
 		char hun = arr[0];
 		char ten = arr[1];
 		char one = arr[2];
-		int hap = hun + ten + one;
+		int hap = Character.getNumericValue(hun) + Character.getNumericValue(ten) + Character.getNumericValue(one);
 		System.out.printf("%d", hap);
+		*/
+		
+		/*
+		Scanner sc = new Scanner(System.in);
+		System.out.print("전공 이수 학점 : ");
+		int major = sc.nextInt();
+		System.out.print("교양 이수 학점 : ");
+		int culture = sc.nextInt();
+		System.out.print("일반 이수 학점 : ");
+		int normal = sc.nextInt();
+		
+		if(major >= 70)
+		{
+			if(culture >= 30) {
+				if(normal >= 30) {
+					System.out.print("졸업 가능");
+				}
+				else {
+					if(major+culture >=80) {
+						System.out.print("졸업 가능");
+						}
+					else if(major+normal >=80) {
+						System.out.print("졸업 가능");
+						}
+					else {
+						System.out.print("졸업 불가");
+						}
+					}
+				}
+			else {
+				System.out.print("졸업 불가");
+				}
+			}
+		else
+		{
+			System.out.print("졸업 불가");	
+		}
+		*/
 	}
-
 }
