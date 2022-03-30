@@ -72,7 +72,7 @@ public class book {
 		System.out.printf("원기둥의 부피는 %.2f", a*a*b*3.14);
 		*/
 		
-		
+		/*
 		//4번
 		Scanner sc = new Scanner(System.in);
 		System.out.print("초 단위 정수를 입력하세요 : ");
@@ -82,7 +82,7 @@ public class book {
 		int min2 = (time-hour*3600)/60;
 		int sec = time%60;
 		System.out.printf("%d시간 %d분 %d초 %d", hour, min, sec,min2);
-		
+		*/
 		
 		
 		/*
@@ -135,32 +135,13 @@ public class book {
 		System.out.print("일반 이수 학점 : ");
 		int normal = sc.nextInt();
 		
-		if(major >= 70)
-		{
-			if(culture >= 30) {
-				if(normal >= 30) {
-					System.out.print("졸업 가능");
-				}
-				else {
-					if(major+culture >=80) {
-						System.out.print("졸업 가능");
-						}
-					else if(major+normal >=80) {
-						System.out.print("졸업 가능");
-						}
-					else {
-						System.out.print("졸업 불가");
-						}
-					}
-				}
-			else {
-				System.out.print("졸업 불가");
-				}
-			}
-		else
-		{
-			System.out.print("졸업 불가");	
-		}
-		*/
+		if (major >= 70) {
+	         if ((culture >= 30 && normal >= 30) || (culture + normal) >= 80)
+	            System.out.print("졸업가능");
+	         else
+	            System.out.print("졸업불가능");
+	      } else
+	         System.out.print("졸업불가능");
+	  */
 	}
 }
