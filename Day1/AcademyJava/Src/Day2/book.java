@@ -72,16 +72,17 @@ public class book {
 		System.out.printf("원기둥의 부피는 %.2f", a*a*b*3.14);
 		*/
 		
-		/*
+		
 		//4번
 		Scanner sc = new Scanner(System.in);
 		System.out.print("초 단위 정수를 입력하세요 : ");
 		int time = sc.nextInt();
 		int hour = time/(3600);
 		int min = time/60-(hour*60);
+		int min2 = (time-hour*3600)/60;
 		int sec = time%60;
-		System.out.printf("%d시간 %d분 %d초", hour, min, sec);
-		*/
+		System.out.printf("%d시간 %d분 %d초 %d", hour, min, sec,min2);
+		
 		
 		
 		/*
