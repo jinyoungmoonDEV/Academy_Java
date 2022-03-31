@@ -1,5 +1,4 @@
 package Day4;
-import java.util.Arrays;
 import java.util.Scanner;
 public class midstr {
 
@@ -16,11 +15,9 @@ public class midstr {
 		String ps= strs[0];
 		int pa = Integer.parseInt(strs[1]);
 		int pb = Integer.parseInt(strs[2]);
-		String temp="";
-	  //return ps.substring(pa - 1, pb);
-		for(int i=pa-1;i<=pb;i++) {
-		}
-		return temp;
+		String temp = new String("");
+	    temp = ps.substring(pa - 1, pb);
+	    return temp;
 	}
 
 }
