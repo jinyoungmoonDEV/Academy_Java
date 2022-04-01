@@ -1,0 +1,2 @@
+friendly(디포르트 상태) : 같은클래스에만 상속 가능(protected는 다른클래스도 상속가능)
+pritected는 다른클래스도 상속가능
