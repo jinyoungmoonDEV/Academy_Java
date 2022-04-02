@@ -15,7 +15,7 @@ public class Day4 {
 			System.out.print("미성년");
 		 */
 
-		
+
 		/*
 		//2번
 		Scanner sc = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class Day4 {
 			System.out.print("노력해야겠습니다.");
 		 */
 
-		
+
 		/*
 		//3번
 		Scanner sc = new Scanner(System.in);
@@ -47,7 +47,7 @@ public class Day4 {
 		System.out.printf("입력한 양의 정수 중에서 짝수의 합은 %d", hap);
 		 */
 
-		
+
 		/*
 		//4번
 		int a = 5;
@@ -60,13 +60,13 @@ public class Day4 {
 		}
 		 */
 
-		
+
 		//5번
 		/*
 		int a,b,c;
 		for(a=1;a<20;a++)
 		for(b=1;b<20;b++)
-		for(c=1;c<20;c++)
+		for(c=1;c< ;c++)
 		if(a+b+c >= 20) {
 			continue;
 		}
@@ -75,19 +75,20 @@ public class Day4 {
 		}
 		 */
 
-		
+
 		//6번+7번
 		/*
 		String c = input("철수");
 		String y = input("영희");
 		whoWin(c,y);
-		*/
-		
-		
+		 */
+
+
 		/*
 		//8번(코드 main메소드 아래)
 		System.out.println(factorial(5));
 		 */
+
 
 		/*
 		//9번
@@ -105,8 +106,8 @@ public class Day4 {
 		System.out.printf("%s %d %d\n",s,a,b);
 	}
 		 */
-		
-		
+
+
 		//10번
 		/*
 		System.out.print("양의 정수릏 입력하세요 : ");
@@ -117,22 +118,21 @@ public class Day4 {
 			System.out.println(num + "는 소수가 아닙니다.");
 		 */
 	}
-	
-	
-	/*8번
+
+	/*
+	//8번
 	static int factorial(int n) {
-		return switch (n) {
-		case 1 -> 1;
-		case 2 -> 2;
-		case 3 -> 3;
-		case 4 -> 4;
-		case 5 -> 5;
-		default -> 18;
-		};
+
+		if(n == 1) {
+			return 1;
+		}
+		else {
+			return n * factorial ( n - 1 );
+		}
 	}
 	 */
-	
-	
+
+
 	/*//10번
 	public static boolean isPrine(int num) {
 		int count = 0;
@@ -149,9 +149,9 @@ public class Day4 {
 		}
 	}
 	 */
-	
-	
-     /*
+
+
+	/*
       //6,7번
 	public static void whoWin(String c, String y) {
 		Scanner sc = new Scanner(System.in);
@@ -184,11 +184,11 @@ public class Day4 {
 				System.out.println("무승부");
 		}
 	}
-	
+
 
 	public static String input(String string) {
 		return string;
 	}
-	*/
+	 */
 }
 
