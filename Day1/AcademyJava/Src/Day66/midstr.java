@@ -1,7 +1,7 @@
 package Day66;
 import java.util.Scanner;
 
-class Select{
+ class Select{
 	String s, t;
 	static final int NUM = 0;
 	static final int STR = 1;
