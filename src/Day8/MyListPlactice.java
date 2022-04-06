@@ -1,8 +1,8 @@
 package Day8;
 import java.util.Scanner;
 
-class MyList {
-	static class Node{
+class MyList {//문진영 코드입니다!
+	static class Node{//static 사용함으로써 다형성 구현
 		int item;
 		Object a = null;
 		Node llink;//왼쪽자식
@@ -10,14 +10,14 @@ class MyList {
 		public Node(int item) {//Node 클래스 생성자
 			this.item = item;
 		}
-		public Node(Object a) {//Node 클래스 생성자
+		public Node(Object a) {//다형성을 활용하여 null을 위한 Node메서드 활용
 			this.a = a;
 		}
 	}
 	public Node add(Node head,int num){//입력
 		MyList.Node node;
-		MyList.Node newnode= new MyList.Node(null);
-		newnode.item = num;
+		MyList.Node newnode= new MyList.Node(null);//다형성을 활용하여 null을 위한 Node메서드 활용
+		newnode.item = num;//newnode에 받은num 값을 지정 0 출력 방지
 		if(head==null) {//값이 없을경우
 			head = new Node(num);//새로운 지정
 			head.item = num;
@@ -65,7 +65,7 @@ public class MyListPlactice {
 		int cond,item;
 		Scanner scanner = new Scanner(System.in);
 		MyList.Node head;//head object생성
-		head = new MyList.Node(null);
+		head = new MyList.Node(null);//다형성을 활용하여 null을 위한 Node메서드 활용
 		head.llink = head.rlink = head;//초기화
 		MyList list = new MyList();
 		while(true) {
