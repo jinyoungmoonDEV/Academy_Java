@@ -2,39 +2,60 @@ package Day8;
 import java.util.Scanner;
 
 class MyList {
-	class Node{
+	static class Node{
 		int item;
-		Node llink;
-		Node rlink;
-		public  Node(int item) {
+		Object a = null;
+		Node llink;//왼쪽자식
+		Node rlink;//오른쪽자식
+		public Node(int item) {//Node 클래스 생성자
 			this.item = item;
 		}
-	}
-	public   Node add(Node p,int num){
-		if(p==null) {
-			p = new Node(num);
-			p.item = num;
-			p.link = null;
-
+		public Node(Object a) {//Node 클래스 생성자
+			this.a = a;
 		}
-		else {
-			p.link = add(p.link, num);
-		}
-		return p;
 	}
-	public  Node delete(Node p) {
-		if(p==null) {
+	public Node add(Node head,int num){//입력
+		MyList.Node node;
+		MyList.Node newnode= new MyList.Node(null);
+		newnode.item = num;
+		if(head==null) {//값이 없을경우
+			head = new Node(num);//새로운 지정
+			head.item = num;
+			head.llink = null;
+			head.rlink = null;
+		}
+		else {//값있을경우
+			node = head.llink;//삽입 위치
+			newnode.llink = node;//시작 = 끝
+			newnode.rlink = node.rlink;//자기자신 지정
+			node.rlink.llink = newnode;
+			node.rlink = newnode;
+		}
+		return head;
+	}
+	public Node delete(Node head) {//삭제
+		MyList.Node deleted;//deleted object 생성
+		if(head==null) {//입력값이 없을떄
 			System.out.printf("입력한 값이 없습니다.");
-			return p;
+			return head;
+		}
+		else if((head == head.llink) && (head == head.rlink)){//왼쪽자식 유,무 and연산자로 확인
+			System.out.print("Queue Empty\n");
 		}
 		else {
-			return p.link;
+			deleted = head.rlink;//queue구조로 오른쪽자식부터 삭제
+			deleted.llink.rlink = deleted.rlink;
+			deleted.rlink.llink = deleted.llink;
+			return head;//deleted결과 리턴
 		}
+		return head;//임의 리턴
 	}
-	public  void print(Node p) {
-		while(p != null) {
-			System.out.println(p.item);
-			p = p.link;
+	public  void print(Node head) {//출력
+		MyList.Node ptr;
+		ptr = head.rlink;
+		while(ptr != head) {
+			System.out.println(ptr.item);
+			ptr = ptr.rlink;//queue구조로 rlist먼저 출력
 		}
 	}
 }
@@ -43,28 +64,30 @@ public class MyListPlactice {
 	public static void main(String[] args) {
 		int cond,item;
 		Scanner scanner = new Scanner(System.in);
-		MyList.Node root = null;
+		MyList.Node head;//head object생성
+		head = new MyList.Node(null);
+		head.llink = head.rlink = head;//초기화
 		MyList list = new MyList();
 		while(true) {
 			System.out.println("1.삽입 2.삭제 3.출력 4.종료");
 			cond = scanner.nextInt();
-			if(cond ==1) {
+			if(cond ==1) {//삽입선택 -> add()
 				System.out.printf("입력하세요 :");
 				item = scanner.nextInt();
-				root = list.add(root,item);
+				head = list.add(head,item);
 			}
-			else if(cond == 2) {
-				root = list.delete(root);
+			else if(cond == 2) {//삭제선택 -> delete()
+				head = list.delete(head);
 			}
-			else if (cond == 3) {
-				list.print(root);
+			else if (cond == 3) {//출력선택 -> print()
+				list.print(head);
 			}
-			else if(cond == 4) {
+			else if(cond == 4) {//수고하셨습니다!
 				System.out.print("수고하셨습니다.");
 				break;
 			}
 			else {
-				System.out.print("다시입력하세요\n");
+				System.out.print("다시입력하세요.\n");
 			}
 		}
 	}
